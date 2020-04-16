@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    <style>
+        header,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Raleway", sans-serif
+        }
+
+        body,
+        html {
+            height: 100%
+        }
+
+        .button {
+            background-color: #000000;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            text-decoration: underline
+        }
+
+        .button:focus {
+            outline: none;
+        }
+
+        a {
+            color: white;
+        }
+
+        input {
+            color: black;
+        }
+    </style>
+</head>
+<!--Header-->
+
+<body style="background:black">
+    <!-- Header -->
+    <header class="w3-container w3-theme w3-padding" id="myHeader">
+        <div>
+            <h4>Power and Pedagogy</h4>
+        </div>
+    </header>
+
+    <!--Columns-->
+    <div class="w3-row-padding w3-center w3-margin-top">
+
+        <!--Left Column-->
+        <div class="w3-third" id="left">
+            <div class="w3-card w3-display-container" style="min-height:460px">
+
+                <p style="color:white" class="w3-display-middle" id="recording-1"> </p>
+            </div>
+        </div>
+
+
+        <!--Middle Column-->
+        <div class="w3-third" id= "middle">
+            <div class="w3-card w3-container" style="min-height:460px">
+
+                <!--First Section: Think of Dilemma-->
+
+                <div class="w3-display-middle" id="dilemma_start">
+                    <h1 style="color:white" class="w3-large w3 center"> Think of a dilemma in your life.</h1>
+                    <hr id="dilemma_line" class="w3-border-grey" style="margin:auto;width:40%">
+                    <p id="dilemma_click_okay" style="color:white" class="w3-large w3-center">Click “okay” when you are
+                        ready</p>
+
+                    <!--First Section: Button for transition-->
+
+                    <div class="w3-container">
+                        <button id="Okay_button" class="button" onclick="replaceD1WithD2()">Okay</button>
+                    </div>
+                </div>
+
+                <!--Second Section 1.0: What are the names of the people involved in your dilemma?-->
+                <div class="w3-display-middle" id="dilemma_names" style="display:none">
+
+                    <p id="dilemma_click_okay" style="color:white" class="w3-large w3-center">What are the names of the
+                        people involved in your dilemma?</p>
+                    <hr id="dilemma_line" class="w3-border-grey" style="margin:auto;width:40%">
+
+                    <!--Second Section 2.0: Input the name of person 1-->
+
+                    <div class="form-group" id="dilemma_person1">
+                        <form>
+                            <p style="color:white">Your name <input type="text" name="Person 1" id="Person1input">
+
+                                <span style="display:none" id="person1output"></span> <input type="button"
+                                    value="Submit" onClick="print1();showAddPerson1Button()"></p>
+                        </form>
+                    </div>
+
+                    <!--Second Section 2.1: Button to add the name of person 2-->
+
+                    <div class="form-group" id="dilemma_addperson1" style="display:none">
+                        <p style="color:white">Add Person 1<span id="addPerson1button"></span>
+                            <input type="button" value="Submit" onClick="showSecondPerson()"></p>
+
+                    </div>
+
+                    <!--Second Section 3.0: Input the name of person 2-->
+
+                    <div class="form-group" id="dilemma_person2" style="display:none">
+                        <form>
+                            <p style="color:white">Person 1 <input type="text" name="Person 2" id="Person2input">
+
+                                <span id="person2output" style="display:none"></span> <input type="button"
+                                    value="Submit" onClick="print2();showAddPerson2Button()"></p>
+                        </form>
+                    </div>
+
+
+                    <!--Second Section 3.1: Button to add the name of person 3-->
+
+                    <div class="form-group" id="dilemma_addperson2" style="display:none">
+                        <p style="color:white">Add Person 2<span id="addPerson2button"></span>
+                            <input type="button" value="Submit" onClick="showThirdPerson()"></p>
+
+                    </div>
+
+                    <!--Second Section 3.0: Input the name of person 3-->
+
+                    <div class="form-group" id="dilemma_person3" style="display:none">
+                        <form>
+                            <p style="color:white">Person 2 <input type="text" name="Person 3" id="Person3input">
+
+                                <span id="person3output" style="display:none"></span> <input type="button"
+                                    value="Submit" onClick="print3();showAddPerson3Button()"></p>
+                        </form>
+                    </div>
+
+
+                    <!--Second Section 3.1: Button to add the name of person 3-->
+
+                    <div class="form-group" id="dilemma_addperson3" style="display:none">
+                        <p style="color:white">Add Person 3<span id="addPerson4button"></span>
+                            <input type="button" value="Submit" onClick="showFourthPerson()"></p>
+
+                    </div>
+
+
+                    <!--Second Section 4.0: Input the name of person 3-->
+
+                    <div class="form-group" id="dilemma_person4" style="display:none">
+                        <form>
+                            <p style="color:white">Person 3 <input type="text" name="Person 4" id="Person4input">
+
+                                <span id="person4output" style="display:none"></span> <input type="button"
+                                    value="Submit" onClick="print4();showAddPerson4Button()"></p>
+                            <p id=person1test></p>
+                        </form>
+                    </div>
+
+                    <!--Second Section 4.1: Appear button to transition to move to next screen-->
+
+                    <div class="form-group" id="dilemma_addperson4" style="display:none">
+                        <p style="color:white"><span id="addPerson4button"></span>
+                            <button id="continue1" class="button" onclick="recordDilemma()">Continue</button>
+                        </p>
+                    </div>
+
+
+                    <!--Third Section 1.0: Record your dilemma-->
+
+                    <div class="w3-display-middle" id="dilemma_record1" style="display:none">
+                        <h1 id = "record_respond" style="color:white" class="w3-large w3 center"> Record your dilemma as if you were <span
+                                id="currentUser"></span></h1>
+                                <h1 style="color:white" class="w3-large w3 center"> Start with "I..." <span
+                                    id="currentUser"></span></h1>
+                    
+                        <hr id="dilemma_line" class="w3-border-grey" style="margin:auto;width:40%">
+                        <p style="display:none">*SPOT FOR RECORDING Person <span id="currentRecording"></span> Button*
+                        </p>
+
+                        <div id=conrols1Div1>
+                            <div id="controls1">
+                                <button class="button" onclick="startRecording()" id="recordButton">Record</button>
+                                <button class="button" onclick="pauseRecording()" id="pauseButton"
+                                    disabled>Pause</button>
+                                <button class="button" onclick="stopRecording()" id="stopButton" disabled>Stop</button>
+                            </div>
+                            <div id="formats"></div>
+                            <p style="color:white">Recordings Status: <strong id="recordingStatus"></strong></p>
+                        </div>
+
+                        <button id="continue2" class="button" onclick="goToNextRecording()">Continue</button>
+                    </div>
+
+                    <div class="w3-display-middle" id="dilemma_finish" style="display:none">
+                        <h1 style="color:white" class="w3-large w3 center"> "I heard my soul singing behind a leaf, plucked the leaf,</h1>
+                        <h1 style="color:white" class="w3-large w3 center"> but then I heard it singing behind a veil.</h1>
+                        <h1 style="color:white" class="w3-large w3 center"> I tore the veil, but then I heard it singing behind a wall.</h1>
+                        <h1 style="color:white" class="w3-large w3 center"> I broke the wall, and I heard my soul singing against me.</h1>
+                        <h1 style="color:white" class="w3-large w3 center"> I built up the wall, mended the curtain, but I could not put back the leaf.</h1>
+                        <h1 style="color:white" class="w3-large w3 center"> I held it in my hand and I heard my soul singing mightily against me.</h1>
+                        <h1 style="color:white" class="w3-large w3 center"> This is what it’s like to study without a friend."</h1>
+                        <hr id="dilemma_line" class="w3-border-grey" style="margin:auto;width:40%">
+                        <p id="dilemma_click_okay" style="color:white" class="w3-large w3-center">-Leonard Cohen</p>
+                        <button id="continue2" class="button" onclick="showFinal2()">To Finish</button>
+                    </div>
+
+
+                    <div class="w3-display-middle" id="dilemma_finish2" style="display:none">
+                        <p id="dilemma_click_okay" style="color:white" class="w3-large w3-center"></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!--Right Column-->
+        <div class="w3-third" id="right">
+            <div class="w3-card w3-display-container" style="min-height:460px">
+
+                <p style="color:white" class="w3-display-middle" id="recording-2"> </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-row-padding w3-center w3-margin-top" id="bottom_1st">
+        <div class="w3-third">
+            <p style="color:white" id="recording-3"> <br> </p>
+        </div>
+
+        <div class="w3-third">
+            <p style="color:white" id="recording-4"> </p>
+        </div>
+
+        <div class="w3-third">
+            <p style="color:white" id="recording-5"> </p>
+        </div>
+    </div>
+
+
+
+    <!--Bottom-->
+    <div class="w3-display-bottomleft w3-padding-large">
+        <p style="color:white"> "In a place where there are no humans, there seek to be human."</p>
+    </div>
+
+
+    <script>
+        let user1 = '';
+        let user2 = '';
+        let user3 = '';
+        let user4 = '';
+        let currentRecording = 0;
+        //First Section 1.0: Transition from Section 1 to Section 2
+        function replaceD1WithD2() {
+            document.getElementById('dilemma_start').innerHTML = document.getElementById('dilemma_names').innerHTML;
+        }
+
+        /*Second Section 1.0: Outputs the name that user inputs for person 1 when 'submit' is pressed
+        
+        **Impotant**
+        This is different than the rest because the content is meant to default to to appear on screen. The inputs for the other people have to be toggled in which is why the if then statement have 'block' & 'none' in differnt order
+        */
+        function print1() {
+            user1 = document.getElementById("person1output").innerHTML = document.getElementById('Person1input').value;
+            var x = document.getElementById("dilemma_person1");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+            document.getElementById("dilemma_person1").style.color = "white";
+        }
+
+        //Second Section 1.1 Show the add person 2 button
+        function showAddPerson1Button() {
+            var x = document.getElementById("dilemma_addperson1");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        //Second Section 2.0: Show Second Section
+        function showSecondPerson() {
+            document.getElementById('dilemma_addperson1').innerHTML = document.getElementById("dilemma_person2").innerHTML;
+        }
+
+
+        //Second Section 2.1: Output the name of the second person
+        function print2() {
+            user2 = document.getElementById("person2output").innerHTML = document.getElementById('Person2input').value;
+            var x = document.getElementById("dilemma_person2");
+            document.getElementById("dilemma_person2").style.color = "white";
+        }
+
+        //Second Section 2.2: Show the add person 3 button
+        function showAddPerson2Button() {
+            var x = document.getElementById("dilemma_addperson2");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        //Second Section 3.0: Show Third Section
+        function showThirdPerson() {
+            document.getElementById('dilemma_addperson2').innerHTML = document.getElementById("dilemma_person3").innerHTML;
+        }
+
+
+        //Second Section 3.1: Output the name of the second person
+        function print3() {
+            user3 = document.getElementById("person3output").innerHTML = document.getElementById('Person3input').value;
+            var x = document.getElementById("dilemma_person3");
+            document.getElementById("dilemma_person3").style.color = "white";
+        }
+
+        //Second Section 3.2: Show the add person 3 button
+        function showAddPerson3Button() {
+            var x = document.getElementById("dilemma_addperson3");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        //Second Section 3.0: Show Fourth Section
+        function showFourthPerson() {
+            document.getElementById('dilemma_addperson3').innerHTML = document.getElementById("dilemma_person4").innerHTML;
+        }
+
+
+        //Second Section 3.1: Output the name of the second person
+        function print4() {
+            user4 = document.getElementById("person4output").innerHTML = document.getElementById('Person4input').value;
+            var x = document.getElementById("dilemma_person4");
+            document.getElementById("dilemma_person4").style.color = "white";
+        }
+
+        //Second Section 3.2: Show the add person 3 button
+        function showAddPerson4Button() {
+            var x = document.getElementById("dilemma_addperson4");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        //Third Section 1.0: Show record your dilemma 
+        function recordDilemma() {
+            document.getElementById('currentRecording').innerHTML = currentRecording = 1;
+            document.getElementById("dilemma_start").innerHTML = document.getElementById("dilemma_record1").innerHTML;
+            document.getElementById('currentUser').innerHTML = user1
+        }
+
+        //Third Section 2.0: Show record person 1
+        function goToNextRecording(name1) {
+            document.getElementById('currentRecording').innerHTML = currentRecording = currentRecording + 1;
+            var str = document.getElementById("record_respond").innerHTML; 
+            var res = str.replace("Record your dilemma as if you were", "Respond to your dilemma as if you were");
+             document.getElementById("record_respond").innerHTML = res; 
+
+            if (currentRecording <= 5) {
+                switch (currentRecording) {
+                    case 2:
+                        document.getElementById('currentUser').innerHTML = user2
+                        break;
+                    case 3:
+                        document.getElementById('currentUser').innerHTML = user3
+                        break;
+                    case 4:
+                        document.getElementById('currentUser').innerHTML = user4
+                        break;
+                    case 5:
+                        
+                        res = str.replace("Respond to your dilemma as if you were", "Take a moment and listen back to your recordings <br> Now respond to your dilemma as if you were ");
+                        document.getElementById("record_respond").innerHTML = res;
+                        document.getElementById('currentUser').innerHTML = user1
+                        break;
+
+                    default:
+                        document.getElementById('currentUser').innerHTML = ''
+                        
+                }
+            } else {
+                document.getElementById('recordingStatus').innerHTML = '';
+                document.getElementById("dilemma_start").innerHTML = document.getElementById("dilemma_finish").innerHTML;
+                
+            }
+        }
+
+        function showFinal2() {
+            document.getElementById('dilemma_start').innerHTML = "";
+            document.getElementById('left').innerHTML = "";
+            document.getElementById('middle').innerHTML = "";
+            document.getElementById('right').innerHTML = "";
+            document.getElementById('bottom_1st').innerHTML = "";
+        }
+
+        //Third Section 2.0: Show record person 1 NAME
+
+        function printPerson1Name() {
+            document.getElementById("person1output").innerHTML = document.getElementById('Person1input').value;
+        }
+    </script>
+
+    <script src="record.js"> </script>
+
+</body>
+
+</html>
